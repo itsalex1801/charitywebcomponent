@@ -1,0 +1,550 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
+		<script type="text/javascript">
+			window.tailwind.config = {
+				darkMode: ['class'],
+				theme: {
+					extend: {
+						colors: {
+							border: 'hsl(var(--border))',
+							input: 'hsl(var(--input))',
+							ring: 'hsl(var(--ring))',
+							background: 'hsl(var(--background))',
+							foreground: 'hsl(var(--foreground))',
+							primary: {
+								DEFAULT: 'hsl(var(--primary))',
+								foreground: 'hsl(var(--primary-foreground))'
+							},
+							secondary: {
+								DEFAULT: 'hsl(var(--secondary))',
+								foreground: 'hsl(var(--secondary-foreground))'
+							},
+							destructive: {
+								DEFAULT: 'hsl(var(--destructive))',
+								foreground: 'hsl(var(--destructive-foreground))'
+							},
+							muted: {
+								DEFAULT: 'hsl(var(--muted))',
+								foreground: 'hsl(var(--muted-foreground))'
+							},
+							accent: {
+								DEFAULT: 'hsl(var(--accent))',
+								foreground: 'hsl(var(--accent-foreground))'
+							},
+							popover: {
+								DEFAULT: 'hsl(var(--popover))',
+								foreground: 'hsl(var(--popover-foreground))'
+							},
+							card: {
+								DEFAULT: 'hsl(var(--card))',
+								foreground: 'hsl(var(--card-foreground))'
+							},
+						},
+					}
+				}
+			}
+		</script>
+		<style type="text/tailwindcss">
+			@layer base {
+				:root {
+					--background: 0 0% 100%;
+--foreground: 224 71.4% 4.1%;
+--card: 0 0% 100%;
+--card-foreground: 224 71.4% 4.1%;
+--popover: 0 0% 100%;
+--popover-foreground: 224 71.4% 4.1%;
+--primary: 220.9 39.3% 11%;
+--primary-foreground: 210 20% 98%;
+--secondary: 220 14.3% 95.9%;
+--secondary-foreground: 220.9 39.3% 11%;
+--muted: 220 14.3% 95.9%;
+--muted-foreground: 220 8.9% 46.1%;
+--accent: 220 14.3% 95.9%;
+--accent-foreground: 220.9 39.3% 11%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 210 20% 98%;
+--border: 220 13% 91%;
+--input: 220 13% 91%;
+--ring: 224 71.4% 4.1%;
+--radius: 0.35rem;
+				}
+				.dark {
+					--background: 224 71.4% 4.1%;
+--foreground: 210 20% 98%;
+--card: 224 71.4% 4.1%;
+--card-foreground: 210 20% 98%;
+--popover: 224 71.4% 4.1%;
+--popover-foreground: 210 20% 98%;
+--primary: 210 20% 98%;
+--primary-foreground: 220.9 39.3% 11%;
+--secondary: 215 27.9% 16.9%;
+--secondary-foreground: 210 20% 98%;
+--muted: 215 27.9% 16.9%;
+--muted-foreground: 217.9 10.6% 64.9%;
+--accent: 215 27.9% 16.9%;
+--accent-foreground: 210 20% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 210 20% 98%;
+--border: 215 27.9% 16.9%;
+--input: 215 27.9% 16.9%;
+--ring: 216 12.2% 83.9%;
+				}
+			}
+		</style>
+  </head>
+  <body>
+    <div class="bg-[var(--background)] text-[var(--foreground)]">
+  
+  <header class="bg-primary text-primary-foreground p-4 flex justify-between items-center">
+    <div class="flex items-center space-x-4">
+      <span class="text-sm">📞 +123 456 7890</span>
+      <span class="text-sm">📧 info@example.com</span>
+    </div>
+    <div class="flex space-x-4">
+      <a href="#" class="text-sm">Home</a>
+      <a href="#" class="text-sm">Services</a>
+      <a href="#" class="text-sm">About Us</a>
+      <a href="#" class="text-sm">Support</a>
+      <a href="#" class="text-sm">Contact</a>
+      <button class="bg-secondary text-secondary-foreground px-4 py-2 rounded">Donate</button>
+    </div>
+  </header>
+  
+  <section class="relative bg-cover bg-center h-[500px]" style="background-image: url('https://placehold.co/1920x500');">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4">
+      <h1 class="text-4xl font-bold mb-4">Being Life Saver For Someone</h1>
+      <p class="mb-4">Need Help?</p>
+      <div class="flex space-x-4">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded">Donate</button>
+        <button class="bg-zinc-500 text-white px-4 py-2 rounded">Discover More</button>
+      </div>
+    </div>
+  </section>
+  
+  <main class="p-8 space-y-16">
+    
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-secondary text-secondary-foreground p-8 rounded">
+        <h2 class="text-2xl font-bold mb-4">Raise Funds</h2>
+        <p class="mb-4">Become a funder and help us reach our goals.</p>
+        <button class="bg-primary text-primary-foreground px-4 py-2 rounded">Discover</button>
+      </div>
+      <div class="bg-white shadow-lg p-8 rounded">
+        <h2 class="text-2xl font-bold mb-4">Become a Volunteer</h2>
+        <p class="mb-4">Join our organization and help those in need.</p>
+        <button class="bg-primary text-primary-foreground px-4 py-2 rounded">Join Organization</button>
+      </div>
+    </section>
+
+<section class="text-center">
+  <h2 class="text-3xl font-bold mb-4">About Us</h2>
+  <p class="mb-8">Help People, Our Main Goals</p>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-white shadow-lg p-8 rounded">
+      <h3 class="text-xl font-bold mb-4">Community Resources</h3>
+      <p class="mb-4">Providing essential resources to communities in need.</p>
+    </div>
+    <div class="bg-white shadow-lg p-8 rounded">
+      <h3 class="text-xl font-bold mb-4">Resume Writing</h3>
+      <p class="mb-4">Helping individuals create professional resumes.</p>
+    </div>
+    <div class="bg-white shadow-lg p-8 rounded">
+      <h3 class="text-xl font-bold mb-4">Strategy Planning</h3>
+      <p class="mb-4">Assisting with strategic planning for better outcomes.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="text-center">
+  <h2 class="text-3xl font-bold mb-4">Our Services</h2>
+  <p class="mb-8">You can help lots of people</p>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-white shadow-lg p-8 rounded">
+      <img src="https://placehold.co/300x200" alt="Emergency Shelter" class="mb-4 rounded">
+      <h3 class="text-xl font-bold mb-4">Emergency Shelter</h3>
+      <p class="mb-4">Providing shelter to those in need.</p>
+      <button class="bg-primary text-primary-foreground px-4 py-2 rounded">Donate</button>
+    </div>
+    <div class="bg-white shadow-lg p-8 rounded">
+      <img src="https://placehold.co/300x200" alt="Community Resources" class="mb-4 rounded">
+      <h3 class="text-xl font-bold mb-4">Community Resources</h3>
+      <p class="mb-4">Providing resources to communities.</p>
+      <button class="bg-primary text-primary-foreground px-4 py-2 rounded">Donate</button>
+    </div>
+    <div class="bg-white shadow-lg p-8 rounded">
+      <img src="https://placehold.co/300x200" alt="Emergency Shelter" class="mb-4 rounded">
+      <h3 class="text-xl font-bold mb-4">Emergency Shelter</h3>
+      <p class="mb-4">Providing shelter to those in need.</p>
+      <button class="bg-primary text-primary-foreground px-4 py-2 rounded">Donate</button>
+    </div>
+  </div>
+</section>
+
+
+<section class="relative bg-cover bg-center h-[500px]" style="background-image: url('https://placehold.co/1920x500');">
+  <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4">
+    <h2 class="text-3xl font-bold mb-4">Join The Community To Give Your Presence</h2>
+    <p class="mb-8">Become a volunteer and help those in need.</p>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <button class="bg-blue-500 text-white px-4 py-2 rounded">Donate Now</button>
+      </div>
+      <div class="bg-white text-black p-8 rounded">
+        <h3 class="text-xl font-bold mb-4">Become A Volunteer</h3>
+        <form>
+          <input type="text" placeholder="Full Name" class="w-full mb-4 p-2 border rounded">
+          <input type="email" placeholder="Email Address" class="w-full mb-4 p-2 border rounded">
+          <input type="text" placeholder="Phone Number" class="w-full mb-4 p-2 border rounded">
+          <textarea placeholder="Message" class="w-full mb-4 p-2 border rounded"></textarea>
+          <button type="submit" class="bg-primary text-primary-foreground px-4 py-2 rounded">Submit Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="text-center">
+  <h2 class="text-3xl font-bold mb-4">What We Do</h2>
+  <p class="mb-8">We do it for People in Need</p>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-white shadow-lg p-8 rounded">
+      <img src="https://placehold.co/100x100" alt="Medicine Help" class="mb-4 rounded-full mx-auto">
+      <h3 class="text-xl font-bold mb-4">Medicine Help</h3>
+      <p class="mb-4">Providing medical assistance to those in need.</p>
+    </div>
+    <div class="bg-white shadow-lg p-8 rounded">
+      <img src="https://placehold.co/100x100" alt="Water Delivery" class="mb-4 rounded-full mx-auto">
+      <h3 class="text-xl font-bold mb-4">Water Delivery</h3>
+      <p class="mb-4">Delivering clean water to communities.</p>
+    </div>
+    <div class="bg-white shadow-lg p-8 rounded">
+      <img src="https://placehold.co/100x100" alt="We Care About" class="mb-4 rounded-full mx-auto">
+      <h3 class="text-xl font-bold mb-4">We Care About</h3>
+      <p class="mb-4">Caring for the well-being of individuals.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="text-center">
+  <h2 class="text-3xl font-bold mb-4">Featured Projects</h2>
+  <p class="mb-8">More than One Life Changed</p>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div class="bg-white shadow-lg p-8 rounded">
+      <img src="https://placehold.co/300x200" alt="Project Image" class="mb-4 rounded">
+      <h3 class="text-xl font-bold mb-4">Education</h3>
+      <p class="mb-4">Providing educational resources to children.</p>
+    </div>
+    <div class="bg-white shadow-lg p-8 rounded">
+      <img src="https://placehold.co/300x200" alt="Project Image" class="mb-4 rounded">
+      <h3 class="text-xl font-bold mb-4">Health</h3>
+      <p class="mb-4">Ensuring health and well-being of communities.</p>
+    </div>
+    <div class="bg-white shadow-lg p-8 rounded">
+      <img src="https://placehold.co/300x200" alt="Project Image" class="mb-4 rounded">
+      <h3 class="text-xl font-bold mb-4">Community</h3>
+      <p class="mb-4">Building strong and supportive communities.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="text-center">
+  <h2 class="text-3xl font-bold mb-4">What People Say About Us</h2>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="bg-white shadow-lg p-8 rounded">
+      <img src="https://placehold.co/100x100" alt="Person Image" class="mb-4 rounded-full mx-auto">
+      <h3 class="text-xl font-bold mb-4">Belli Smith</h3>
+      <p class="mb-4">"Great organization! They really care about the community."</p>
+    </div>
+    <div class="bg-white shadow-lg p-8 rounded">
+      <img src="https://placehold.co/100x100" alt="Person Image" class="mb-4 rounded-full mx-auto">
+      <h3 class="text-xl font-bold mb-4">Sara Taylor</h3>
+      <p class="mb-4">"Amazing experience volunteering with them."</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-primary text-primary-foreground p-8 text-center">
+  <h2 class="text-3xl font-bold mb-4">Subscribe to our Newsletter</h2>
+  <p class="mb-4">Sign up for our monthly newsletter to get the latest news, volunteer opportunities, and more.</p>
+  <form class="flex justify-center">
+    <input type="email" placeholder="Enter Your Email Address" class="w-full md:w-1/2 p-2 border rounded-l">
+    <button type="submit" class="bg-secondary text-secondary-foreground px-4 py-2 rounded-r">Send</button>
+  </form>
+</section>
+
+
+<section class="text-center p-8">
+  <h2 class="text-3xl font-bold mb-4">Recent Blog Posts</h2>
+  <button class="bg-primary text-primary-foreground px-4 py-2 rounded">See Our Blog</button>
+</section>
+  </main>
+  
+  <footer class="bg-zinc-800 text-white p-8">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">Logo</h3>
+        <p class="mb-4">We are a non-profit organization dedicated to helping those in need.</p>
+        <div class="flex space-x-4">
+          <a href="#" class="text-white">Facebook</a>
+          <a href="#" class="text-white">Twitter</a>
+          <a href="#" class="text-white">Instagram</a>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Get Involved</h3>
+        <ul>
+          <li><a href="#" class="text-white">Volunteer</a></li>
+          <li><a href="#" class="text-white">Donate</a></li>
+          <li><a href="#" class="text-white">Partner</a></li>
+          <li><a href="#" class="text-white">Team</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-bold mb-4">Contact</h3>
+        <p class="mb-4">📧 info@example.com</p>
+        <p class="mb-4">📞 +123 456 7890</p>
+      </div>
+    </div>
+    <div class="text-center mt-8">
+      <p>&copy; 2023 Non-Profit Organization. All rights reserved.</p>
+    </div>
+  </footer>
+</div>
+---
+version: 0.1
+prompt: 
+---
+      <header className="bg-primary text-primary-foreground p-4 flex justify-between items-center">
+        <div className="flex items-center space-x-4">
+          <span className="text-sm">📞 +123 456 7890</span>
+          <span className="text-sm">📧 info@example.com</span>
+        </div>
+        <div className="flex space-x-4">
+          <a href="#" className="text-sm">Home</a>
+          <a href="#" className="text-sm">Services</a>
+          <a href="#" className="text-sm">About Us</a>
+          <a href="#" className="text-sm">Support</a>
+          <a href="#" className="text-sm">Contact</a>
+          <button className="bg-secondary text-secondary-foreground px-4 py-2 rounded">Donate</button>
+        </div>
+      </header>
+      
+      <section className="relative bg-cover bg-center h-[500px]" style="background-image: url('https://placehold.co/1920x500');">
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4">
+          <h1 className="text-4xl font-bold mb-4">Being Life Saver For Someone</h1>
+          <p className="mb-4">Need Help?</p>
+          <div className="flex space-x-4">
+            <button className="bg-blue-500 text-white px-4 py-2 rounded">Donate</button>
+            <button className="bg-zinc-500 text-white px-4 py-2 rounded">Discover More</button>
+          </div>
+        </div>
+      </section>
+      
+      <main className="p-8 space-y-16">
+        
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="bg-secondary text-secondary-foreground p-8 rounded">
+            <h2 className="text-2xl font-bold mb-4">Raise Funds</h2>
+            <p className="mb-4">Become a funder and help us reach our goals.</p>
+            <button className="bg-primary text-primary-foreground px-4 py-2 rounded">Discover</button>
+          </div>
+          <div className="bg-white shadow-lg p-8 rounded">
+            <h2 className="text-2xl font-bold mb-4">Become a Volunteer</h2>
+            <p className="mb-4">Join our organization and help those in need.</p>
+            <button className="bg-primary text-primary-foreground px-4 py-2 rounded">Join Organization</button>
+          </div>
+        </section>
+    
+    <section className="text-center">
+      <h2 className="text-3xl font-bold mb-4">About Us</h2>
+      <p className="mb-8">Help People, Our Main Goals</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="bg-white shadow-lg p-8 rounded">
+          <h3 className="text-xl font-bold mb-4">Community Resources</h3>
+          <p className="mb-4">Providing essential resources to communities in need.</p>
+        </div>
+        <div className="bg-white shadow-lg p-8 rounded">
+          <h3 className="text-xl font-bold mb-4">Resume Writing</h3>
+          <p className="mb-4">Helping individuals create professional resumes.</p>
+        </div>
+        <div className="bg-white shadow-lg p-8 rounded">
+          <h3 className="text-xl font-bold mb-4">Strategy Planning</h3>
+          <p className="mb-4">Assisting with strategic planning for better outcomes.</p>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section className="text-center">
+      <h2 className="text-3xl font-bold mb-4">Our Services</h2>
+      <p className="mb-8">You can help lots of people</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="bg-white shadow-lg p-8 rounded">
+          <img src="https://placehold.co/300x200" alt="Emergency Shelter" className="mb-4 rounded">
+          <h3 className="text-xl font-bold mb-4">Emergency Shelter</h3>
+          <p className="mb-4">Providing shelter to those in need.</p>
+          <button className="bg-primary text-primary-foreground px-4 py-2 rounded">Donate</button>
+        </div>
+        <div className="bg-white shadow-lg p-8 rounded">
+          <img src="https://placehold.co/300x200" alt="Community Resources" className="mb-4 rounded">
+          <h3 className="text-xl font-bold mb-4">Community Resources</h3>
+          <p className="mb-4">Providing resources to communities.</p>
+          <button className="bg-primary text-primary-foreground px-4 py-2 rounded">Donate</button>
+        </div>
+        <div className="bg-white shadow-lg p-8 rounded">
+          <img src="https://placehold.co/300x200" alt="Emergency Shelter" className="mb-4 rounded">
+          <h3 className="text-xl font-bold mb-4">Emergency Shelter</h3>
+          <p className="mb-4">Providing shelter to those in need.</p>
+          <button className="bg-primary text-primary-foreground px-4 py-2 rounded">Donate</button>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section className="relative bg-cover bg-center h-[500px]" style="background-image: url('https://placehold.co/1920x500');">
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white p-4">
+        <h2 className="text-3xl font-bold mb-4">Join The Community To Give Your Presence</h2>
+        <p className="mb-8">Become a volunteer and help those in need.</p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <button className="bg-blue-500 text-white px-4 py-2 rounded">Donate Now</button>
+          </div>
+          <div className="bg-white text-black p-8 rounded">
+            <h3 className="text-xl font-bold mb-4">Become A Volunteer</h3>
+            <form>
+              <input type="text" placeholder="Full Name" className="w-full mb-4 p-2 border rounded">
+              <input type="email" placeholder="Email Address" className="w-full mb-4 p-2 border rounded">
+              <input type="text" placeholder="Phone Number" className="w-full mb-4 p-2 border rounded">
+              <textarea placeholder="Message" className="w-full mb-4 p-2 border rounded"></textarea>
+              <button type="submit" className="bg-primary text-primary-foreground px-4 py-2 rounded">Submit Now</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section className="text-center">
+      <h2 className="text-3xl font-bold mb-4">What We Do</h2>
+      <p className="mb-8">We do it for People in Need</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="bg-white shadow-lg p-8 rounded">
+          <img src="https://placehold.co/100x100" alt="Medicine Help" className="mb-4 rounded-full mx-auto">
+          <h3 className="text-xl font-bold mb-4">Medicine Help</h3>
+          <p className="mb-4">Providing medical assistance to those in need.</p>
+        </div>
+        <div className="bg-white shadow-lg p-8 rounded">
+          <img src="https://placehold.co/100x100" alt="Water Delivery" className="mb-4 rounded-full mx-auto">
+          <h3 className="text-xl font-bold mb-4">Water Delivery</h3>
+          <p className="mb-4">Delivering clean water to communities.</p>
+        </div>
+        <div className="bg-white shadow-lg p-8 rounded">
+          <img src="https://placehold.co/100x100" alt="We Care About" className="mb-4 rounded-full mx-auto">
+          <h3 className="text-xl font-bold mb-4">We Care About</h3>
+          <p className="mb-4">Caring for the well-being of individuals.</p>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section className="text-center">
+      <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
+      <p className="mb-8">More than One Life Changed</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="bg-white shadow-lg p-8 rounded">
+          <img src="https://placehold.co/300x200" alt="Project Image" className="mb-4 rounded">
+          <h3 className="text-xl font-bold mb-4">Education</h3>
+          <p className="mb-4">Providing educational resources to children.</p>
+        </div>
+        <div className="bg-white shadow-lg p-8 rounded">
+          <img src="https://placehold.co/300x200" alt="Project Image" className="mb-4 rounded">
+          <h3 className="text-xl font-bold mb-4">Health</h3>
+          <p className="mb-4">Ensuring health and well-being of communities.</p>
+        </div>
+        <div className="bg-white shadow-lg p-8 rounded">
+          <img src="https://placehold.co/300x200" alt="Project Image" className="mb-4 rounded">
+          <h3 className="text-xl font-bold mb-4">Community</h3>
+          <p className="mb-4">Building strong and supportive communities.</p>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section className="text-center">
+      <h2 className="text-3xl font-bold mb-4">What People Say About Us</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="bg-white shadow-lg p-8 rounded">
+          <img src="https://placehold.co/100x100" alt="Person Image" className="mb-4 rounded-full mx-auto">
+          <h3 className="text-xl font-bold mb-4">Belli Smith</h3>
+          <p className="mb-4">"Great organization! They really care about the community."</p>
+        </div>
+        <div className="bg-white shadow-lg p-8 rounded">
+          <img src="https://placehold.co/100x100" alt="Person Image" className="mb-4 rounded-full mx-auto">
+          <h3 className="text-xl font-bold mb-4">Sara Taylor</h3>
+          <p className="mb-4">"Amazing experience volunteering with them."</p>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section className="bg-primary text-primary-foreground p-8 text-center">
+      <h2 className="text-3xl font-bold mb-4">Subscribe to our Newsletter</h2>
+      <p className="mb-4">Sign up for our monthly newsletter to get the latest news, volunteer opportunities, and more.</p>
+      <form className="flex justify-center">
+        <input type="email" placeholder="Enter Your Email Address" className="w-full md:w-1/2 p-2 border rounded-l">
+        <button type="submit" className="bg-secondary text-secondary-foreground px-4 py-2 rounded-r">Send</button>
+      </form>
+    </section>
+    
+    
+    <section className="text-center p-8">
+      <h2 className="text-3xl font-bold mb-4">Recent Blog Posts</h2>
+      <button className="bg-primary text-primary-foreground px-4 py-2 rounded">See Our Blog</button>
+    </section>
+      </main>
+      
+      <footer className="bg-zinc-800 text-white p-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 className="text-xl font-bold mb-4">Logo</h3>
+            <p className="mb-4">We are a non-profit organization dedicated to helping those in need.</p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-white">Facebook</a>
+              <a href="#" className="text-white">Twitter</a>
+              <a href="#" className="text-white">Instagram</a>
+            </div>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-4">Get Involved</h3>
+            <ul>
+              <li><a href="#" className="text-white">Volunteer</a></li>
+              <li><a href="#" className="text-white">Donate</a></li>
+              <li><a href="#" className="text-white">Partner</a></li>
+              <li><a href="#" className="text-white">Team</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-4">Contact</h3>
+            <p className="mb-4">📧 info@example.com</p>
+            <p className="mb-4">📞 +123 456 7890</p>
+          </div>
+        </div>
+        <div className="text-center mt-8">
+          <p>&copy; 2023 Non-Profit Organization. All rights reserved.</p>
+        </div>
+      </footer>
+    </div>
+)
+
+
+  </body>
+</html>
